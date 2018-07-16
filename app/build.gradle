@@ -1,8 +1,9 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion global.compileSdkVersion()
     defaultConfig {
+        applicationId "com.gcssloop.pagelayoutmanager"
         minSdkVersion global.minSdkVersion()
         targetSdkVersion global.targetSdkVersion()
         versionCode version_code
@@ -11,5 +12,10 @@ android {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':pagerlayoutmanager')
+
+    implementation global.appcompat_v7()
     implementation global.recyclerview_v7()
+    implementation global.constraintLayout()
 }
