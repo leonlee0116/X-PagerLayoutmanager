@@ -1,28 +1,7 @@
-/*
- * Copyright 2017 GcsSloop
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * Last modified 2017-09-18 23:47:01
- *
- * GitHub: https://github.com/GcsSloop
- * WeiBo: http://weibo.com/GcsSloop
- * WebSite: http://www.gcssloop.com
- */
-
 package com.gcssloop.pagelayoutmanager;
 
 import android.annotation.SuppressLint;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +11,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 @SuppressWarnings("WeakerAccess")
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -45,8 +23,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
+    @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //    Log.i("GCS", "onCreateViewHolder");
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.layout_item, parent, false);
@@ -54,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         //   Log.i("GCS","onBindViewHolder = "+position);
         final String title = data.get(position);
         holder.tvTitle.setText(title);
@@ -79,7 +58,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         MyViewHolder(View itemView) {
             super(itemView);
-            tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
+            tvTitle = itemView.findViewById(R.id.tv_title);
         }
     }
 }
