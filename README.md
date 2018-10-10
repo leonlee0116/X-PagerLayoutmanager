@@ -1,5 +1,7 @@
 # PagerLayoutManager
 
+[ ![Download](https://api.bintray.com/packages/weixia/maven/x-pagerlayoutmanager/images/download.svg) ](https://bintray.com/weixia/maven/x-pagerlayoutmanager/_latestVersion)
+
 具有分页功能的 Recyclerview 布局管理器，主打分页，可以替代部分场景下的网格布局，线性布局，以及一些简单的ViewPager，但也有一定的局限性，请选择性使用。
 
 - [网格分页布局源码解析(上)](https://xiaozhuanlan.com/topic/5841730926)
@@ -191,7 +193,7 @@ allprojects {
     repositories {
         jcenter()
         // 私有仓库地址
-       maven { url "http://lib.gcssloop.com/repository/gcssloop-central/" }
+       maven { url "https://dl.bintray.com/weixia/maven" }
     }
 }
 ```
@@ -201,7 +203,7 @@ allprojects {
 在需要添加依赖的 Module 下添加以下信息，使用方式和普通的远程仓库一样。
 
 ```groovy
-implementation 'com.gcssloop.recyclerview:pagerlayoutmanager:2.3.8'
+implementation 'me.xia:x-pagerlayoutmanager:1.0.2'
 ```
 
 
