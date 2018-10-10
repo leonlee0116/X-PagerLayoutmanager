@@ -18,8 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class MainActivity extends AppCompatActivity implements PagerGridLayoutManager
-        .PageListener, RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements
+        PagerGridLayoutManager.PageListener,
+        RadioGroup.OnCheckedChangeListener {
 
     private int mRows = 2;
     private int mColumns = 3;
