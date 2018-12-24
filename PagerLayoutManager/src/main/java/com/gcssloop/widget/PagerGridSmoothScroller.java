@@ -1,10 +1,11 @@
 package com.gcssloop.widget;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearSmoothScroller;
-import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearSmoothScroller;
+import androidx.recyclerview.widget.RecyclerView;
 
 import static com.gcssloop.widget.PagerConfig.Logi;
 

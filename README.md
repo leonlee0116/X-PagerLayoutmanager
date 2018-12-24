@@ -203,7 +203,7 @@ allprojects {
 在需要添加依赖的 Module 下添加以下信息，使用方式和普通的远程仓库一样。
 
 ```groovy
-implementation 'me.xia:x-pagerlayoutmanager:1.0.2'
+implementation 'me.xia:x-pagerlayoutmanager:1.0.3'
 ```
 
 

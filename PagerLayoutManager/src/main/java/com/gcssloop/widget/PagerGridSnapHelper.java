@@ -1,10 +1,11 @@
 package com.gcssloop.widget;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SnapHelper;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import static com.gcssloop.widget.PagerConfig.Loge;
 
@@ -80,7 +81,7 @@ public class PagerGridSnapHelper extends SnapHelper {
                                       int velocityX, int velocityY) {
         int target = RecyclerView.NO_POSITION;
         Loge("findTargetSnapPosition, velocityX = " + velocityX + ", velocityY" + velocityY);
-        if (null != layoutManager && layoutManager instanceof PagerGridLayoutManager) {
+        if (layoutManager instanceof PagerGridLayoutManager) {
             PagerGridLayoutManager manager = (PagerGridLayoutManager) layoutManager;
             if (manager.canScrollHorizontally()) {
                 if (velocityX > PagerConfig.getFlingThreshold()) {

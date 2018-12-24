@@ -3,17 +3,19 @@ package com.gcssloop.widget;
 import android.annotation.SuppressLint;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
-import android.support.v7.widget.LinearSmoothScroller;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_IDLE;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearSmoothScroller;
+import androidx.recyclerview.widget.RecyclerView;
+
 import static android.view.View.MeasureSpec.EXACTLY;
+import static androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE;
 import static com.gcssloop.widget.PagerConfig.Loge;
 import static com.gcssloop.widget.PagerConfig.Logi;
 
@@ -499,7 +501,7 @@ public class PagerGridLayoutManager extends RecyclerView.LayoutManager
      * @param heightMeasureSpec 高估属性
      */
     @Override
-    public void onMeasure(RecyclerView.Recycler recycler, RecyclerView.State state, int widthMeasureSpec, int heightMeasureSpec) {
+    public void onMeasure(@NonNull RecyclerView.Recycler recycler, @NonNull RecyclerView.State state, int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(recycler, state, widthMeasureSpec, heightMeasureSpec);
         int widthsize = View.MeasureSpec.getSize(widthMeasureSpec);      //取出宽度的确切数值
         int widthmode = View.MeasureSpec.getMode(widthMeasureSpec);      //取出宽度的测量模式
@@ -661,7 +663,6 @@ public class PagerGridLayoutManager extends RecyclerView.LayoutManager
         }
         return getChildAt(0);
     }
-
 
     //--- 处理页码变化 -------------------------------------------------------------------------------
 
