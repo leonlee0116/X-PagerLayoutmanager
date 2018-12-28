@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    compileOnly 'androidx.recyclerview:recyclerview:1.1.0-alpha01'
+    compileOnly 'androidx.recyclerview:recyclerview:1.0.0'
 }
 
 apply from: 'bintray.gradle'
